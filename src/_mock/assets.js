@@ -48,21 +48,13 @@ const DASHBOARD_PERMISSION = {
     {
       id: '8426999229400979',
       parentId: '9100714781927703',
-      label: 'sys.menu.workbench',
-      name: 'Workbench',
-      type: PermissionType.MENU,
-      route: 'workbench',
-      component: '/dashboard/workbench/index.tsx',
-    },
-    {
-      id: '9710971640510357',
-      parentId: '9100714781927703',
-      label: 'sys.menu.blank',
+      label: 'sys.menu.individual-dashboard',
       name: 'Individual Dashboard',
       type: PermissionType.MENU,
-      route: 'individual_dashboard',
-      component: '/sys/others/blank.tsx',
+      route: 'individual-dashboard',
+      component: '/dashboard/individual-dashboard/index.tsx',
     },
+   
   ],
 };
 const MANAGEMENT_PERMISSION = {
@@ -151,6 +143,17 @@ const OTHERS_PERMISSION = [
     type: PermissionType.MENU,
     route: 'singlePageReport',
     component: '/sys/others/OnePageReport.tsx',
+    hide:true
+  },
+  {
+    id: '0941594969900756',
+    parentId: '',
+    label: 'sys.assessmentSurvey',
+    name: 'assessment-survey',
+    icon: 'ic_blank',
+    type: PermissionType.MENU,
+    route: 'assessmentSurvey',
+    component: '/sys/others/AssessmentSurvey.tsx',
     hide:true
   },
 ];

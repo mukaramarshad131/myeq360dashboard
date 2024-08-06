@@ -3,14 +3,15 @@ import { Badge, Button } from 'antd';
 
 import goldExecutive from '@/assets/images/packages/gold-exe.png';
 import Card from '@/components/card';
-import { businessPackages } from '@/projectData';
+import { coachPackages } from '@/projectData';
 
-function BusinessPackages() {
+function CoachPackages() {
   return (
     <>
-      <h1 className="p-5 text-center text-3xl font-semibold text-[#0092B3]">Business Packages</h1>
+      <h1 className="p-5 text-center text-3xl font-semibold text-[#0092B3]">Coach Packages</h1>
       <div className="mb-5 flex flex-wrap items-center justify-around gap-5">
-        {businessPackages.map((data: any) => {
+        {coachPackages.map((data: any) => {
+          console.log('coachPackages', coachPackages);
           return (
             <Card
               key={data.id}
@@ -55,8 +56,8 @@ function BusinessPackages() {
                 <p>
                   {data.description}
                   <ul className="mb-5 mt-5 text-[15px] font-semibold">
-                    <li>{data.executiveLicenses}- Executive </li>
-                    <li>{data.managerLicenses}- Manager</li>
+                    <li>{data.executiveLicenses}- Coach </li>
+                    <li>{data.managerLicenses}- Client</li>
                     <li>{data.staffLicenses}- Staff(Team Members )</li>
                   </ul>
                 </p>
@@ -66,8 +67,8 @@ function BusinessPackages() {
                     <div className="flex flex-row gap-1">
                       <img src={goldExecutive} alt="" width={30} height={30} />
                       <p>
-                        {data.executiveLicenses} × EQ360 Business &nbsp;
-                        <span className="font-bold">EXECUTIVE</span>&nbsp; License
+                        {data.executiveLicenses} × EQ360 Professional &nbsp;
+                        <span className="font-bold">COACH</span>&nbsp; License
                       </p>
                     </div>
                     <span className="text-right">
@@ -79,25 +80,12 @@ function BusinessPackages() {
                       <img src={goldExecutive} alt="" width={30} height={30} />
                       <p>
                         {' '}
-                        {data.managerLicenses} × EQ360 Business &nbsp;
-                        <span className="font-bold">MANAGER</span>&nbsp; License
+                        {data.managerLicenses} × EQ360 Professional &nbsp;
+                        <span className="font-bold">CLIENT</span>&nbsp; License
                       </p>
                     </div>
                     <span className="text-right">
                       <del>({data.managerLicensePrice}</del> -$75.00 )
-                    </span>
-                  </li>
-
-                  <li className="flex flex-col">
-                    <div className="flex flex-row gap-1">
-                      <img src={goldExecutive} alt="" width={30} height={30} />
-                      <p>
-                        {data.staffLicenses} × EQ360 Business &nbsp;
-                        <span className="font-bold">Team Member</span>&nbsp; License
-                      </p>
-                    </div>
-                    <span className="text-right">
-                      <del>({data.staffLicensePrice}</del> -$75.00)
                     </span>
                   </li>
                 </ul>
@@ -125,4 +113,4 @@ function BusinessPackages() {
   );
 }
 
-export default BusinessPackages;
+export default CoachPackages;

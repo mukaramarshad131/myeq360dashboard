@@ -3,7 +3,7 @@ import { Col, Input, Row, Select } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 import Card from '@/components/card';
-import { EqTestPostAssessment } from '@/constants';
+import { EqTestPostAssessment } from '@/projectData';
 
 const { Option } = Select;
 
@@ -29,7 +29,7 @@ function EqPostAssessment() {
   const navigate = useNavigate();
 
   const handleResult = () => {
-    navigate('/singlePageReport');
+    navigate('/assessmentSurvey');
   };
   return (
     <div className="p-10">
